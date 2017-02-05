@@ -36,8 +36,13 @@ public class Test3 {
 		house5.add(null);
 		house5.add(new Space("Bedroom", 160.0));
 		
-		House[] houses = {house1,house2,house3,house4,house5};
-		System.out.println(biggestFloorSpace(houses));
+		House[] houses1 = null;
+		House[] houses2 = {null,null,null};
+		House[] houses3 = {house1,house2,house3,house4,house5};
+		
+		System.out.println(biggestFloorSpace(houses1));
+		System.out.println(biggestFloorSpace(houses2));
+		System.out.println(biggestFloorSpace(houses3));
 	}
 	
 	public static House biggestFloorSpace(House[] houses) {
