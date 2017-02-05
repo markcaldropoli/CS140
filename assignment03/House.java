@@ -15,9 +15,11 @@ public class House {
 	}
 	
 	public double totalArea() {
-		int totalArea = 0;
-		for(int i=0; i<spaces.length && spaces[i] != null; i++) {
-			totalArea += spaces[i].getArea();
+		double totalArea = 0;
+		for(int i=0; i<spaces.length; i++) {
+			if(spaces[i] != null) {
+				totalArea += spaces[i].getArea();
+			}
 		}
 		return totalArea;
 	}
