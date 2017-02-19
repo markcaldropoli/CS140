@@ -75,10 +75,11 @@ public class CalendarEntry {
 		LocalDate tempDate = date;
 		while(tempDate.getDayOfWeek() != newDay) {
 			tempDate = tempDate.plus(1, DAYS);
-			//System.out.println("debugging " + tempDate);
 		}
 		System.out.println();
 		temp.setDate(tempDate);
+		temp.setDescription(description);
+		temp.setLocation(location);
 		return temp;
 	}
 	
@@ -89,7 +90,6 @@ public class CalendarEntry {
 	public String toString() {
 		DateTimeFormatter df = DateTimeFormatter.ofPattern("EE MMMM dd, yyyy");
 		DateTimeFormatter tf = DateTimeFormatter.ofPattern("hh:mm a");
-		return date.format(df)+" from "+startTime.format(tf)+" to "+endTime.format(tf);
-		//return date.getDayOfWeek()+" "+date.getMonth()+" "+date.getDayOfMonth()+", "+date.getYear()+" from "+startTime+" to "+endTime;
+		return getDescription()+", "+getLocation()+", "+date.format(df)+" from "+startTime.format(tf)+" to "+endTime.format(tf);
 	}
  }
