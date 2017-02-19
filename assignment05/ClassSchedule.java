@@ -15,9 +15,14 @@ public class ClassSchedule {
 		skipDays.add(skipDay);
 	}
 	
-	public boolean meetsOn(LocalDate aDate) {
-		for(int w=0; w<classDays.size(); w++) {
-			if(classDays.get(w).meetsOn(aDate)) {
+	public boolean meetsOn(LocalDate aDate){
+		for(Weekly w : classDays) {
+			if(w.meetsOn(aDate)) {
+				for(Daily d : skipDays) {
+					if(d.meetsOn(aDate)) {
+						return false;
+					}
+				}
 				return true;
 			}
 		}
