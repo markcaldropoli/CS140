@@ -9,7 +9,9 @@ package lab05;
  * InquisitiveGreeter:
  *
  * Entering InquisitiveGreeter::sayHi
+ * Entering Greet::sayHi
  * Hello, Bob.
+ * Exiting Greet::sayHi
  * How are you, Bob?
  * Exiting InquisitiveGreeter::sayHi
  */
