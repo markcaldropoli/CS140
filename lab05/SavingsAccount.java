@@ -34,6 +34,6 @@ public class SavingsAccount extends BankAccount {
 
 	@Override
 	public String toString() {
-		return super.toString()+" @ "+rate+"%";
+		return super.toString()+" @ "+rate*100+"%";
 	}
 }
