@@ -16,8 +16,19 @@ public class FirstDigitDistribution {
 	}
 	
 	public void display() {
-	      for (int i = 0; i < counters.length; i++) {
-	         System.out.println(i + ": " + counters[i]);
-	      }
-	   }
+		int biggest = 0;
+		for(int i=0; i<counters.length; i++) {
+			if(counters[i] > biggest) {
+				biggest = counters[i];
+			}
+		}
+		for(int i=0; i<counters.length; i++) {
+			System.out.print(i+": ");
+			int scale = (int)Math.round((40.0*counters[i])/biggest);
+			for(int j=0; j<scale; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
 }
