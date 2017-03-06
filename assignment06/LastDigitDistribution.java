@@ -22,10 +22,10 @@ public class LastDigitDistribution {
 				biggest = counters[i];
 			}
 		}
-		double scale = biggest/40.;
 		for(int i=0; i<counters.length; i++) {
 			System.out.print(i+": ");
-			for(int j=0; j<counters[i]/scale; j++) {
+			int scale = (int)Math.round((40.0*counters[i])/biggest);
+			for(int j=0; j<scale; j++) {
 				System.out.print("*");
 			}
 			System.out.println();
