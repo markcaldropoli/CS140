@@ -1,9 +1,22 @@
 package assignment06;
 
-import java.text.NumberFormat;
-
 public class DecimalSeparatorFormatter implements NumberFormatter {
 	public String format(int n) {
-		return NumberFormat.getInstance().format(n);
+		String num = "";
+		if(n < 0) {
+			num = ""+(-n);
+		} else {
+			num = ""+n;
+		}
+		if(num.length() > 3) {
+			for(int i=num.length()-3; i>0; i-=3) {
+				num = num.substring(0,i) + "," + num.substring(i, num.length());
+			}
+		}
+		if(n<0) {
+			return "-"+num;
+		} else {
+			return num;
+		}
 	}
 }
