@@ -30,6 +30,14 @@ public class MenuEntry {
 	}
 	
 	public String toString() {
-		return name+", $"+price+" -- "+description;
+		return name+", "+price+" -- "+description;
+	}
+
+	public void changeUp(double percent) {
+		price.changeUp(percent);
+	}
+
+	public void changeDown(double percent) {
+		price.changeDown(percent);
 	}
 }
