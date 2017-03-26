@@ -59,8 +59,7 @@ public class Sorting {
 			return new ArrayList<Integer>();
 		}
 		if(inOrder(list)) {
-			ArrayList<Integer> temp = list;
-			return temp;
+			return list;
 		} else {
 			int pivot = list.get(0);
 			ArrayList<Integer> temp = qsort(less(list));
