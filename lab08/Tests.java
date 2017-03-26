@@ -10,15 +10,27 @@ public class Tests {
 	private static final double DELTA = 1e-6;
 	
 	@Test
-	public void testFactorialSimple() {
+	public void testFactorialSimple1() {
 	    assertEquals(1, Recursion.factorial(0));
+	}
+	
+	@Test
+	public void testFactorialSimple2() {
 	    assertEquals(1, Recursion.factorial(1));
+	}
+	
+	@Test
+	public void testFactorialSimple3() {
 	    assertEquals(120, Recursion.factorial(5));
 	}
 	
 	@Test
-	public void testSquareRoot() {
+	public void testSquareRoot1() {
 		assertEquals(0.0, Recursion.squareRoot(0), DELTA);
+	}
+	
+	@Test
+	public void testSquareRoot2() {
 		assertEquals(9.0, Recursion.squareRoot(81.0), DELTA);
 	}
 	
@@ -38,10 +50,14 @@ public class Tests {
 	}
 	
 	@Test
-	public void testBinomialCoefficient() {
-		int n1 = 6, n2 = 10;
-		int k1 = 2, k2 = 6;
-		assertEquals(15, Recursion.binomialCoefficient(n1, k1));
-		assertEquals(210, Recursion.binomialCoefficient(n2, k2));
+	public void testBinomialCoefficient1() {
+		int n = 6, k = 2;
+		assertEquals(15, Recursion.binomialCoefficient(n, k));
+	}
+	
+	@Test
+	public void testBinomialCoefficient2() {
+		int n = 10, k = 6;
+		assertEquals(210, Recursion.binomialCoefficient(n, k));
 	}
 }
