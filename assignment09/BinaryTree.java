@@ -61,7 +61,6 @@ public class BinaryTree implements Serializable {
 		public String toString() {
 			return data + ", ";
 		}
-
 	}
 
 	/**
