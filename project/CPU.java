@@ -17,7 +17,7 @@ public class CPU {
 		return memBase;
 	}
 	
-	public void setAccum(int a) {
+	public void setAccum(int ac) {
 		accum = a;
 	}
 	
