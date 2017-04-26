@@ -29,16 +29,16 @@ public class Tests {
 		int[] test2 = {};
 		int[] test3 = {5, 2, -3, 0, -4, 3};
 		
-		assertEquals(2147483647, new Parent(test1).min(), 0);
-		assertEquals(2147483647, new Parent(test2).min(), 0);
-		assertEquals(-4, new Parent(test3).min(), 0);
+		assertEquals(2147483647, new Parent(test1).min());
+		assertEquals(2147483647, new Parent(test2).min());
+		assertEquals(-4, new Parent(test3).min());
 		
-		assertEquals(2147483647, new Child(test1,test2).min(), 0);
-		assertEquals(2147483647, new Child(test2,test1).min(), 0);
-		assertEquals(2147483647, new Child(test3,test1).min(), 0);
-		assertEquals(-4, new Child(test1,test3).min(), 0);
-		assertEquals(-4, new Child(test2,test3).min(), 0);
-		assertEquals(2147483647, new Child(test3,test2).min(), 0);
+		assertEquals(2147483647, new Child(test1,test2).min());
+		assertEquals(2147483647, new Child(test2,test1).min());
+		assertEquals(-4, new Child(test1,test3).min());
+		assertEquals(-4, new Child(test3,test1).min());
+		assertEquals(-4, new Child(test2,test3).min());
+		assertEquals(-4, new Child(test3,test2).min());
 	}
 	
 	@Test
