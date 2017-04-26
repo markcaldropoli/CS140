@@ -6,11 +6,7 @@ public class Question3 {
 	private int num;
 	
 	public Question3(int n) {
-		if(n < 0) {
-			this.num = -n;
-		} else {
-			this.num = n;
-		}
+		num = Math.abs(n);
 	}
 	
 	public int findNum() {
