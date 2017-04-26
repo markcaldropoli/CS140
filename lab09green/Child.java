@@ -15,6 +15,6 @@ public class Child extends Parent {
 	
 	@Override
 	public int min() {
-		return Math.max(super.min(), new Parent(array).min());
+		return Math.min(super.min(), new Parent(array).min());
 	}
 }
